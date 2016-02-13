@@ -6,11 +6,11 @@ from . import __version__
 
 
 class BashKernel(MetaKernel):
-    implementation = 'MetaKernel Bash'
+    implementation = 'Calysto Bash'
     implementation_version = __version__
     language = 'bash'
     language_version = __version__
-    banner = "MetaKernel Bash - interact with bash"
+    banner = "Calysto Bash - interact with bash"
     language_info = {
         'mimetype': 'text/x-bash',
         'name': 'bash',

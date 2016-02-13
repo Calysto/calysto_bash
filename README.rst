@@ -2,8 +2,8 @@ A Calysto Jupyter kernel for Bash.
 
 To install::
 
-    pip install bash_kernel
-    python -m bash_kernel.install
+    pip install calysto_bash
+    python -m calysto_bash.install
 
 To use it, run one of:
 
@@ -20,4 +20,4 @@ which means it features a standard set of %%magics.
 A sample notebook is available online_.
 
 
-.. _online: http://nbviewer.ipython.org/github/Calysto/bash_kernel/blob/master/bash_kernel.ipynb
+.. _online: http://nbviewer.ipython.org/github/Calysto/calysto_bash/blob/master/calysto_bash.ipynb

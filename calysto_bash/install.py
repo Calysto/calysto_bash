@@ -11,7 +11,7 @@ from IPython.utils.tempdir import TemporaryDirectory
 
 kernel_json = {
     "argv": [sys.executable,
-             "-m", "bash_kernel",
+             "-m", "calysto_bash",
              "-f", "{connection_file}"],
     "display_name": "Calysto Bash",
     "language": "bash",
