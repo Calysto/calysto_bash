@@ -15,7 +15,7 @@ kernel_json = {
              "-f", "{connection_file}"],
     "display_name": "Calysto Bash",
     "language": "bash",
-    'codemirror_mode': 'shell',
+    'mimetype': 'text/x-sh',
     "name": "calysto_bash",
 }
 

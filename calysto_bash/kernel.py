@@ -12,10 +12,9 @@ class BashKernel(MetaKernel):
     language_version = __version__
     banner = "Calysto Bash - interact with bash"
     language_info = {
-        'mimetype': 'text/x-bash',
+        'mimetype': 'text/x-sh',
         'name': 'bash',
         'file_extension': '.sh',
-        'codemirror_mode': 'shell',
         "version": __version__,
         'help_links': MetaKernel.help_links,
     }
