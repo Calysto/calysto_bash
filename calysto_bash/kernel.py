@@ -1,8 +1,21 @@
 from __future__ import print_function
 
+import json
+import os
+import sys
 from metakernel import MetaKernel
 
 from . import __version__
+
+
+def get_kernel_json():
+    """Get the kernel json for the kernel.
+    """
+    here = os.path.dirname(__file__)
+    with open(os.path.join(here, 'kernel.json')) as fid:
+        data = json.load(fid)
+    data['argv'][0] = sys.executable
+    return data
 
 
 class BashKernel(MetaKernel):
@@ -18,6 +31,7 @@ class BashKernel(MetaKernel):
         "version": __version__,
         'help_links': MetaKernel.help_links,
     }
+    kernel_json = get_kernel_json()
 
     def get_usage(self):
         return "This is the bash kernel."
@@ -27,7 +41,11 @@ class BashKernel(MetaKernel):
             return
         self.log.debug('execute: %s' % code)
         shell_magic = self.line_magics['shell']
-        shell_magic.eval(code.strip())
+        try:
+            resp = shell_magic.eval(code.strip())
+            self.Print(resp)
+        except Exception as e:
+            self.Error(e)
         self.log.debug('execute done')
 
     def get_completions(self, info):
