@@ -17,7 +17,6 @@ test: clean
 	jupyter nbconvert --to notebook --execute --ExecutePreprocessor.kernel_name=calysto_bash --ExecutePreprocessor.timeout=60 --stdout calysto_bash.ipynb > /dev/null;
 	make clean
 
-
 release: test clean
 	pip install wheel
 	python setup.py register

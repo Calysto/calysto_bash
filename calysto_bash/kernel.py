@@ -41,7 +41,11 @@ class BashKernel(MetaKernel):
             return
         self.log.debug('execute: %s' % code)
         shell_magic = self.line_magics['shell']
-        shell_magic.eval(code.strip())
+        try:
+            resp = shell_magic.eval(code.strip())
+            self.Print(resp)
+        except Exception as e:
+            self.Error(e)
         self.log.debug('execute done')
 
     def get_completions(self, info):
