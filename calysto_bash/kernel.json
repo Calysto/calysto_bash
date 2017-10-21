@@ -1,0 +1,9 @@
+{
+    "argv": ["python",
+             "-m", "calysto_bash",
+             "-f", "{connection_file}"],
+    "display_name": "Calysto Bash",
+    "language": "bash",
+    "mimetype": "text/x-sh",
+    "name": "calysto_bash"
+}
