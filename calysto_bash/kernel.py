@@ -19,6 +19,7 @@ def get_kernel_json():
 
 
 class BashKernel(MetaKernel):
+    app_name = 'calysto_bash'
     implementation = 'Calysto Bash'
     implementation_version = __version__
     language = 'bash'
