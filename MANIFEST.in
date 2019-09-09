@@ -1,0 +1,7 @@
+include LICENSE
+include README.rst
+include setup.py
+include Makefile
+include calysto_bash.ipynb
+include test_bash_kernel.py
+recursive-include calysto_bash *.py *.json *.png
